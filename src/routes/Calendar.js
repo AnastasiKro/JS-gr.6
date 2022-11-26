@@ -1,6 +1,7 @@
 import DatesPicker from '../Components/CalComps/DatesPicker';
 import MonthChanger from '../Components/CalComps/MonthChanger';
-
+import { ShadowWrapper, DivWrapper, ButtonWrapper, PreviousMonthWrapper, TextWrapper, GridWrapper, CellWrapper, CellRow, DayWrapper, CurrentDayWrapper, TitleWrapper} from '../Components/CalComps/CalendarWrappers';
+import moment from 'moment';
 
 export default function Calendar() {
   window.moment = moment;
