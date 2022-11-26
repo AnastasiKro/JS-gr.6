@@ -72,3 +72,6 @@ export const CurrentDayWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `;
+export const PreviousMonthWrapper = styled(DayWrapper)`
+  color: #808080;
+`;
