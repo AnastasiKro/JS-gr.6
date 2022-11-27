@@ -4,19 +4,28 @@ import moment from 'moment';
 
 
 
-export default function MonthChanger(){
-  const today = moment();
+export default function MonthChanger(props){
+  const handlePrevClick = ()=> {
+    //props.today = props.today.clone().subtract(1, 'month');
+    props.onWork(props.today.clone().subtract(1, 'month'));
+    console.log(props.today)
+  }
+  const handleNextClick = ()=> {
+    //props.today = props.today.clone().subtract(1, 'month');
+    props.onWork(props.today.clone().add(1, 'month'));
+    console.log(props.today)
+  }
   return(
   <DivWrapper>
     <DivWrapper>
-    <ButtonWrapper id="prev" onClick={()=>today.subtract(1, 'month')}> &lt; </ButtonWrapper>
+    <ButtonWrapper id="prev" onClick={handlePrevClick}> &lt; </ButtonWrapper>
   </DivWrapper>
   <DivWrapper>
-      <TitleWrapper>{today.format('MMMM')}</TitleWrapper>
-      <TextWrapper>{today.format('YYYY')}</TextWrapper>
+      <TitleWrapper>{props.today.format('MMMM')}</TitleWrapper>
+      <TextWrapper>{props.today.format('YYYY')}</TextWrapper>
     </DivWrapper>
     <DivWrapper>
-      <ButtonWrapper> &gt; </ButtonWrapper>
+      <ButtonWrapper id="next" onClick={handleNextClick}> &gt; </ButtonWrapper>
     </DivWrapper>
   </DivWrapper>
 );
