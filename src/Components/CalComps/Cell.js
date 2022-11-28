@@ -2,7 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 //import DatesPicker from '../Components/CalComps/DatesPicker';
 //import MonthChanger from '../Components/CalComps/MonthChanger';
-import { ShadowWrapper, DivWrapper, DayOfWeekWrapper, ButtonWrapper, PreviousMonthWrapper, GridWrapper, CellWrapper, CellRow, DayWrapper, CurrentDayWrapper} from './CalendarWrappers';
+import { DivWrapper, DayOfWeekWrapper, ButtonWrapper, PreviousMonthWrapper, GridWrapper, CellWrapper, CellRow, DayWrapper, CurrentDayWrapper} from './CalendarWrappers';
 import moment from 'moment';
 
 export default function Cell(props){
@@ -19,8 +19,8 @@ export default function Cell(props){
      <CellWrapper isHeader>  <DayOfWeekWrapper> Ср </DayOfWeekWrapper></CellWrapper>
      <CellWrapper isHeader>  <DayOfWeekWrapper>Чт </DayOfWeekWrapper></CellWrapper>
      <CellWrapper isHeader>  <DayOfWeekWrapper> Пт </DayOfWeekWrapper></CellWrapper>
-     <CellWrapper isHeader>  <DayOfWeekWrapper> Сб </DayOfWeekWrapper></CellWrapper>
-     <CellWrapper isHeader>  <DayOfWeekWrapper> Вс </DayOfWeekWrapper></CellWrapper>
+     <CellWrapper isHeader isWeekend>  <DayOfWeekWrapper> Сб </DayOfWeekWrapper></CellWrapper>
+     <CellWrapper isHeader isWeekend>  <DayOfWeekWrapper> Вс </DayOfWeekWrapper></CellWrapper>
      {
        daysArray.map((dayItem)=>(
          <CellWrapper 

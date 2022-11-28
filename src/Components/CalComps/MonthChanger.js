@@ -3,17 +3,15 @@ import { DivWrapper, ButtonWrapper, PreviousMonthWrapper, TextWrapper, GridWrapp
 import moment from 'moment';
 
 
-
+const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь","Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ];
 export default function MonthChanger(props){
   const handlePrevClick = ()=> {
     //props.today = props.today.clone().subtract(1, 'month');
     props.onWork(props.today.clone().subtract(1, 'month'));
-    console.log(props.today)
   }
   const handleNextClick = ()=> {
     //props.today = props.today.clone().subtract(1, 'month');
     props.onWork(props.today.clone().add(1, 'month'));
-    console.log(props.today)
   }
   return(
   <DivWrapper>
@@ -21,8 +19,8 @@ export default function MonthChanger(props){
     <ButtonWrapper id="prev" onClick={handlePrevClick}> &lt; </ButtonWrapper>
   </DivWrapper>
   <DivWrapper>
-      <TitleWrapper>{props.today.format('MMMM')}</TitleWrapper>
-      <TextWrapper>{props.today.format('YYYY')}</TextWrapper>
+      <TitleWrapper>{months[props.today.get('M')]}</TitleWrapper>
+      <TitleWrapper>{props.today.format('YYYY')}</TitleWrapper>
     </DivWrapper>
     <DivWrapper>
       <ButtonWrapper id="next" onClick={handleNextClick}> &gt; </ButtonWrapper>
