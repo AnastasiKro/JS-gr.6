@@ -6,19 +6,20 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-export default function ResponsiveDatePickers() {
-  const [value, setValue] = React.useState(dayjs('2022-04-07'));
+export default function DatesPicker(props){
+  const [value, setValue] = React.useState(props.ToDay);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Stack spacing={3}>
         <DatePicker
-          label="Responsive"
+          
           openTo="year"
           views={['year', 'month', 'day']}
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
+            props.onWork(newValue);
           }}
           renderInput={(params) => <TextField {...params} />}
         />
