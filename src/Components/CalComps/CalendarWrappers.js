@@ -3,21 +3,22 @@ import styled from 'styled-components';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 export const ShadowWrapper = styled.div`
-border-top: 1px solid #737374;
-border-left: 1px solid #464648;
-border-right: 1px solid #464648;
-border-bottom: 1px solid #464648;
-border-radius: 8px;
+border-top: 1px solid #0000FF;
+border-left: 1px solid #0000FF;
+border-right: 1px solid #0000FF;
+border-bottom: 1px solid #0000FF;
 overflow: hidden;
+background-color: #FFEFD5;
 box-shadow: 0 0 0 1px #1A1A1A, 0 8px 20px 6px #888;
 `;
 
 export const DatePickerWrapper = styled(DatePicker)`
-  padding: 8px;
   margin-right: 4px;
   width: 400px;
-  left: 25%;
+  left: 35%;
   top: 15px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
 `;
 
 export const DivWrapper = styled.div`
@@ -31,13 +32,18 @@ export const TextWrapper = styled.span`
 export const TitleWrapper = styled(TextWrapper)`
   font-weight: bold;
   margin-right: 8px;
+  padding: 12px;
+  //color: #FFF
 `;
 
 export const ButtonWrapper = styled('button')`
   border: unset;
-  background-color: #E6E6FA;
-  height: 32px;
-  margin-right: 2px;
+  background-color: #191970;
+  color: #FFFFFF;
+  height: 33px;
+  width: 40px;
+  margin-right: 6px;
+  margin-left: 6px;
   border-radius: 4px;
   border-color: #7B68EE;
   border-style: solid;
@@ -52,13 +58,13 @@ export const GridWrapper = styled.div`
   `;
 
 export const CellWrapper = styled.div`
-  min-width: 140px;
+  min-width: 100px;
   min-height: ${props=> props.isHeader ? '40px' : '80px'};
   background-color: ${props=> props.isWeekend ? '#800000' : '#191970'};
-  //color: #444
 `;
 export const CellRow = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: ${props => props.justifyContent ? props.justifyContent: 'flex-start'};
 `;
 export const DayWrapper = styled.div`
@@ -74,6 +80,20 @@ export const DayOfWeekWrapper = styled(DayWrapper)`
   position: relative;
   left: 40%;
   color: #FFFFFF;
+`;
+export const ShowDayWrapper = styled('div')`
+  display: flex;
+  justify-content: flex-end;
+  color: #FFFFFF;
+`;
+export const EventListWrapper = styled('ul')`
+  margin: unset;
+  list-style-position: inside;
+  padding-left: 4px;
+  color: #FFFFFF;
+`;
+export const LiWrapper = styled.li`
+  color: ${props=>props.color ? props.color : '#FFFFFF'}
 `;
 
 export const CurrentDayWrapper = styled.div`
