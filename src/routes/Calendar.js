@@ -24,6 +24,9 @@ export default function Calendar() {
   const handleMonthChange = (newDay) => {
     setToday(newDay)
   }
+  const tasks=[];
+  // tasks for example, 
+  //you can delete them if do not need them
   let task ={
     id: 1,
     date: 1668038400,
@@ -32,20 +35,20 @@ export default function Calendar() {
     conleted: false
   }
   let task2 ={
-    id: "2",
+    id: 2,
     date: 1668470400	,
     endDate:  1670198400,
     task: "task1",
     conleted: false
   }
   let task3 ={
-    id: "3",
+    id: 3,
     date: 1669470400,
     endDate:  1680198400,
     task: "task1",
     conleted: false
   }
-  const tasks=[];
+  
   localStorage.setItem(task.id, JSON.stringify(task));
   localStorage.setItem(task2.id, JSON.stringify(task2));
   localStorage.setItem(task3.id, JSON.stringify(task3));

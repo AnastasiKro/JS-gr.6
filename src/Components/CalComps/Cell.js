@@ -1,5 +1,4 @@
 import React from 'react';
-import dayjs from 'dayjs';
 import { DayOfWeekWrapper, EventListWrapper, LiWrapper, ShowDayWrapper, PreviousMonthWrapper, GridWrapper, CellWrapper, CellRow, DayWrapper, CurrentDayWrapper} from './CalendarWrappers';
 import moment from 'moment';
 

@@ -33,7 +33,7 @@ export const TitleWrapper = styled(TextWrapper)`
   font-weight: bold;
   margin-right: 8px;
   padding: 12px;
-  //color: #FFF
+  
 `;
 
 export const ButtonWrapper = styled('button')`
